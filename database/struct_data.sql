@@ -87,21 +87,21 @@ COMMIT;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `username` varchar(128) NOT NULL,
+  `account` varchar(128) NOT NULL,
   `password` varchar(256) NOT NULL,
   `salt_value` varchar(128) DEFAULT 'SALE',
   `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
+  UNIQUE KEY `account` (`account`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 BEGIN;
-INSERT INTO `user` (`id`, `username`, `password`, `salt_value`, `created_at`, `updated_at`) VALUES (1, 'admin', '123456', '789', '2022-06-12 01:49:22', '2022-06-12 01:49:22');
-INSERT INTO `user` (`id`, `username`, `password`, `salt_value`, `created_at`, `updated_at`) VALUES (2, 'tao', '123321', '12321312', '2022-06-13 00:05:25', '2022-06-13 00:05:25');
+INSERT INTO `user` (`id`, `account`, `password`, `salt_value`, `created_at`, `updated_at`) VALUES (1,'admin', '11111111', '789', '2022-06-12 01:49:22', '2022-06-12 01:49:22');
+INSERT INTO `user` (`id`, `account`, `password`, `salt_value`, `created_at`, `updated_at`) VALUES (2,'tao', '123321', '12321312', '2022-06-13 00:05:25', '2022-06-13 00:05:25');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
